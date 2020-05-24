@@ -12,7 +12,7 @@ public class TextGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GenerateText();
+        GenerateText(Text);
     }
 
     // Update is called once per frame
@@ -21,9 +21,10 @@ public class TextGenerator : MonoBehaviour
         
     }
 
-    public void GenerateText()
+    public void GenerateText(string text)
     {
-        if(Text != null) {
+        if(text != null) {
+            Text = text;
             int column = 0;
             foreach(char ch in Text) {
                 if(Char.IsDigit(ch)) {
